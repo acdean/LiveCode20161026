@@ -36,7 +36,7 @@ class Cube {
   int tex0, tex1, tex2, tex3, tex4, tex5;
   float rx, ry, rz, dx, dy, dz;
   float x, y, z;
-  float MAX = 1.0;
+  float MAX = 10.0;
 
   public Cube() {
     x = random(-MAX, MAX);
@@ -51,7 +51,7 @@ class Cube {
     if (shape == null) {
       shape = createShape();
       shape.beginShape(QUADS);
-      shape.textureMode(IMAGE);
+      shape.textureMode(NORMAL);
 
       shape.noStroke();
       shape.translate(x, y, z);
