@@ -4,7 +4,7 @@ import peasy.org.apache.commons.math.geometry.*;
 import peasy.test.*;
 
 PeasyCam cam;
-PImage[] img = new PImage[4];
+PImage[] img = new PImage[5];
 
 void setup() {
   size (640, 480, OPENGL);
