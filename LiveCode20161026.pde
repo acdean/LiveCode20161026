@@ -36,11 +36,12 @@ class Cube {
   int tex0, tex1, tex2, tex3, tex4, tex5;
   float rx, ry, rz, dx, dy, dz;
   float x, y, z;
+  int MAX = 100;
   
   public Cube() {
-    x = random(-200, 200);
-    y = random(-200, 200);
-    z = random(-200, 200);
+    x = random(-MAX, MAX);
+    y = random(-MAX, MAX);
+    z = random(-MAX, MAX);
     dx = random(-.02, .02);
     dy = random(-.02, .02);
     dz = random(-.02, .02);
