@@ -31,6 +31,9 @@ void draw() {
   }
 }
 
+void keyPressed() {
+  saveFrame("frame####.png");
+}
 
 class Cube {  
   PShape shape = null;
