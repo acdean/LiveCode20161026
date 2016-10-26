@@ -35,8 +35,12 @@ class Cube {
   PShape shape = null;
   int tex0, tex1, tex2, tex3, tex4, tex5;
   float rx, ry, rz, dx, dy, dz;
+  float x, y, z;
   
   public Cube() {
+    x = random(-200, 200);
+    y = random(-200, 200);
+    z = random(-200, 200);
     dx = random(-.02, .02);
     dy = random(-.02, .02);
     dz = random(-.02, .02);
@@ -95,6 +99,7 @@ class Cube {
     rx += dx;
     ry += dy;
     rz += dz;
+    shape.translate(x, y, z);
     shape.rotateX(dx);
     shape.rotateY(dy);
     shape.rotateZ(dz);
