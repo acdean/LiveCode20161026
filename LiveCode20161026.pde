@@ -25,6 +25,7 @@ void setup() {
 void draw() {
   background(frameCount % 360, 50, 50);
   scale(50);
+  lights();
   for (Cube c : cube) {
     c.draw();
   }
