@@ -100,10 +100,10 @@ class Cube {
     rx += dx;
     ry += dy;
     rz += dz;
-    shape.translate(x, y, z);
     shape.rotateX(dx);
     shape.rotateY(dy);
     shape.rotateZ(dz);
+    shape.translate(x, y, z);
     shape(shape);
   }
 }
