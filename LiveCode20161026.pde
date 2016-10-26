@@ -30,7 +30,7 @@ class Cube {
   int tex0, tex1, tex2, tex3, tex4, tex5;
   float rx, ry, rz, dx, dy, dz;
   
-  Cube() {
+  public Cube() {
     dx = random(-.02, .02);
     dy = random(-.02, .02);
     dz = random(-.02, .02);
