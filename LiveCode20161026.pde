@@ -45,9 +45,9 @@ class Cube {
       tex0 = (int)random(img.length);
       shape.texture(img[tex0]);
       shape.vertex(-1, -1, -1, 0.0, 0.0);
-      shape.vertex(-1, 1, -1, 0.0, 1.0);
+      shape.vertex(-1, 1, -1, 1.0, 0.0);
       shape.vertex(-1, 1, 1, 1.0, 1.0);
-      shape.vertex(-1, -1, 1, 1.0, 0.0);
+      shape.vertex(-1, -1, 1, 0.0, 1.0);
 
       tex1 = (int)random(img.length);
       shape.texture(img[tex1]);
