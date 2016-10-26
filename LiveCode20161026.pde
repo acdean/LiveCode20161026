@@ -10,7 +10,7 @@ PImage[] img = new PImage[5];
 ArrayList<Cube> cube = new ArrayList<Cube>();
 
 void setup() {
-  size (640, 480, OPENGL);
+  size (1000, 700, OPENGL);
   cam = new PeasyCam(this, 1000);
   for (int i = 0; i < img.length; i++) {
     img[i] = loadImage("pattern" + i + ".png");
