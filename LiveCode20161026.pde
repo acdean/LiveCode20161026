@@ -12,11 +12,11 @@ ArrayList<Cube> cube = new ArrayList<Cube>();
 void setup() {
   size (640, 480, OPENGL);
   cam = new PeasyCam(this, 1000);
-  for (int i = 0 ; i < img.length ; i++) {
+  for (int i = 0; i < img.length; i++) {
     img[i] = loadImage("pattern" + i + ".png");
   }
   colorMode(HSB, 360, 100, 100);
-  for (int i = 0 ; i < CUBES ; i++) {
+  for (int i = 0; i < CUBES; i++) {
     cube.add(new Cube());
   }
   textureMode(IMAGE);
@@ -30,14 +30,14 @@ void draw() {
   }
 }
 
-  
+
 class Cube {  
   PShape shape = null;
   int tex0, tex1, tex2, tex3, tex4, tex5;
   float rx, ry, rz, dx, dy, dz;
   float x, y, z;
   float MAX = 1.0;
-  
+
   public Cube() {
     x = random(-MAX, MAX);
     y = random(-MAX, MAX);
@@ -52,6 +52,8 @@ class Cube {
       shape = createShape();
       shape.beginShape(QUADS);
       shape.textureMode(IMAGE);
+
+      shape.translate(x, y, z);
 
       tex0 = (int)random(img.length);
       shape.texture(img[tex0]);
@@ -103,7 +105,6 @@ class Cube {
     shape.rotateX(dx);
     shape.rotateY(dy);
     shape.rotateZ(dz);
-    shape.translate(x, y, z);
     shape(shape);
   }
 }
