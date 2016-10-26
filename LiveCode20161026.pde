@@ -53,6 +53,7 @@ class Cube {
       shape.beginShape(QUADS);
       shape.textureMode(IMAGE);
 
+      shape.noStroke();
       shape.translate(x, y, z);
 
       tex0 = (int)random(img.length);
