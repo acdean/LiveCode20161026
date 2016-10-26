@@ -3,9 +3,11 @@ import peasy.org.apache.commons.math.*;
 import peasy.org.apache.commons.math.geometry.*;
 import peasy.test.*;
 
+int CUBES = 50;
+
 PeasyCam cam;
 PImage[] img = new PImage[5];
-Cube cube;
+ArrayList<Cube> cube = new ArrayList<Cube>();
 
 void setup() {
   size (640, 480, OPENGL);
@@ -14,14 +16,18 @@ void setup() {
     img[i] = loadImage("pattern" + i + ".png");
   }
   colorMode(HSB, 360, 100, 100);
-  cube = new Cube();
+  for (int i = 0 ; i < CUBES ; i++) {
+    cube.add(new Cube());
+  }
   textureMode(IMAGE);
 }
 
 void draw() {
   background(frameCount % 360, 50, 50);
   scale(50);
-  cube.draw();
+  for (Cube c : cube) {
+    c.draw();
+  }
 }
 
   
