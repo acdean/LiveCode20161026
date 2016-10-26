@@ -10,7 +10,7 @@ void setup() {
   size (640, 480, OPENGL);
   cam = new PeasyCam(this, 500);
   for (int i = 0 ; i < img.length ; i++) {
-    img[i] = loadImage("texture" + i + ".png");
+    img[i] = loadImage("pattern" + i + ".png");
   }
   colorMode(HSB, 360, 100, 100);
 }
