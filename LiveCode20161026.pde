@@ -5,6 +5,7 @@ import peasy.test.*;
 
 PeasyCam cam;
 PImage[] img = new PImage[5];
+Cube cube;
 
 void setup() {
   size (640, 480, OPENGL);
@@ -13,10 +14,12 @@ void setup() {
     img[i] = loadImage("pattern" + i + ".png");
   }
   colorMode(HSB, 360, 100, 100);
+  cube = new Cube();
 }
 
 void draw() {
   background(frameCount % 360, 50, 50);
+  cube.draw();
 }
 
   
