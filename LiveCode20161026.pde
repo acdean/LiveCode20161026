@@ -15,6 +15,7 @@ void setup() {
   }
   colorMode(HSB, 360, 100, 100);
   cube = new Cube();
+  textureMode(IMAGE);
 }
 
 void draw() {
