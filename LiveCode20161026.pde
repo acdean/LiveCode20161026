@@ -37,7 +37,7 @@ class Cube {
   int tex0, tex1, tex2, tex3, tex4, tex5;
   float rx, ry, rz, dx, dy, dz;
   float x, y, z;
-  float MAX = 10.0;
+  float MAX = 5.0;
 
   public Cube() {
     x = random(-MAX, MAX);
