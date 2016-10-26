@@ -88,9 +88,9 @@ class Cube {
     rx += dx;
     ry += dy;
     rz += dz;
-    rotateX(dx);
-    rotateY(dy);
-    rotateZ(dz);
+    shape.rotateX(dx);
+    shape.rotateY(dy);
+    shape.rotateZ(dz);
     shape(shape);
   }
 }
