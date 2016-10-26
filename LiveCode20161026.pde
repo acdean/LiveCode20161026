@@ -70,7 +70,7 @@ class Cube {
       shape.vertex(1, -1, 1, 0, 1);
 
       tex4 = (int)random(img.length);
-      shape.setTexture(img[tex4]);
+      shape.texture(img[tex4]);
       shape.vertex(-1, 1, -1, 0, 0);
       shape.vertex(1, 1, -1, 1, 0);
       shape.vertex(1, 1, 1, 1, 1);
