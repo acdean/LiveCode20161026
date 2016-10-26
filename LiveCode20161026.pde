@@ -28,6 +28,13 @@ void draw() {
 class Cube {  
   PShape shape = null;
   int tex0, tex1, tex2, tex3, tex4, tex5;
+  float rx, ry, rz, dx, dy, dz;
+  
+  Cube() {
+    dx = random(-.02, .02);
+    dy = random(-.02, .02);
+    dz = random(-.02, .02);
+  }
 
   void draw() {
     if (shape == null) {
@@ -78,6 +85,12 @@ class Cube {
 
       shape.endShape();
     }
+    rx += dx;
+    ry += dy;
+    rz += dz;
+    rotateX(dx);
+    rotateY(dy);
+    rotateZ(dz);
     shape(shape);
   }
 }
