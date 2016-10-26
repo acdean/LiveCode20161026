@@ -21,6 +21,58 @@ void draw() {
 
   
 class Cube {  
+  PShape shape = null;
+  int tex0, tex1, tex2, tex3, tex4, tex5;
+
   void draw() {
+    if (shape == null) {
+      shape = createShape();
+      shape.beginShape(QUADS);
+
+      tex0 = (int)random(img.length);
+      shape.texture(img[tex0]);
+      shape.vertex(-1, -1, -1, 0, 0);
+      shape.vertex(-1, 1, -1, 1, 0);
+      shape.vertex(-1, 1, 1, 1, 1);
+      shape.vertex(-1, -1, 1, 0, 1);
+
+      tex1 = (int)random(img.length);
+      shape.texture(img[tex1]);
+      shape.vertex(-1, -1, -1, 0, 0);
+      shape.vertex(1, -1, -1, 1, 0);
+      shape.vertex(1, -1, 1, 1, 1);
+      shape.vertex(-1, -1, 1, 0, 1);
+
+      tex2 = (int)random(img.length);
+      shape.texture(img[tex2]);
+      shape.vertex(-1, -1, -1, 0, 0);
+      shape.vertex(1, -1, -1, 1, 0);
+      shape.vertex(1, 1, -1, 1, 1);
+      shape.vertex(-1, 1, -1, 0, 1);
+
+      tex3 = (int)random(img.length);
+      shape.texture(img[tex3]);
+      shape.vertex(1, -1, -1, 0, 0);
+      shape.vertex(1, 1, -1, 1, 0);
+      shape.vertex(1, 1, 1, 1, 1);
+      shape.vertex(1, -1, 1, 0, 1);
+
+      tex4 = (int)random(img.length);
+      shape.texture(img[tex4]);
+      shape.vertex(-1, 1, -1, 0, 0);
+      shape.vertex(1, 1, -1, 1, 0);
+      shape.vertex(1, 1, 1, 1, 1);
+      shape.vertex(-1, 1, 1, 0, 1);
+
+      tex5 = (int)random(img.length);
+      shape.texture(img[tex5]);
+      shape.vertex(-1, -1, 1, 0, 0);
+      shape.vertex(1, -1, 1, 1, 0);
+      shape.vertex(1, 1, 1, 1, 1);
+      shape.vertex(-1, 1, 1, 0, 1);
+
+      shape.endShape();
+    }
+    shape(shape);
   }
 }
