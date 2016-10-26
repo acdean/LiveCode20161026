@@ -40,6 +40,7 @@ class Cube {
     if (shape == null) {
       shape = createShape();
       shape.beginShape(QUADS);
+      shape.textureMode(IMAGE);
 
       tex0 = (int)random(img.length);
       shape.texture(img[tex0]);
